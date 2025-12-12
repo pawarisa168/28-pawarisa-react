@@ -1,3 +1,4 @@
+import DataUserTable from "../components/DataUserTable";
 import ViewToggleButton from "../components/ViewToggleButton";
 
 export default function UserView() {
@@ -12,6 +13,7 @@ export default function UserView() {
         <ViewToggleButton to="/user" label="User Home View" />
         <ViewToggleButton to="/admin" label="Admin Home View" />
       </div>
+      <DataUserTable />
     </div>
   );
 }
