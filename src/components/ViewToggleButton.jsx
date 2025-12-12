@@ -1,10 +1,12 @@
-export default function ViewToggleButton({ onClick, children }) {
+import { Link } from "react-router-dom";
+
+export default function ViewToggleButton({ to, label }) {
   return (
-    <button
-      onClick={onClick}
-      className="px-6 py-3 mb-8 bg-gray-200 hover:bg-gray-700 rounded-lg shadow-lg text-lg font-semibold transition duration-300 ease-in-out"
+    <Link
+      to={to}
+      className="px-4 py-2 bg-blue-300 rounded shadow-md  hover:bg-blue-700 transition"
     >
-      {children}
-    </button>
+      {label}
+    </Link>
   );
 }

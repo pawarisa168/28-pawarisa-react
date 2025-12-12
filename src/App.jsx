@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./views/Home";
 import Owner from "./views/Owner";
+import UserView from "./views/UserView";
+import AdminView from "./views/AdminView";
 
 const router = createBrowserRouter([
   {
@@ -9,7 +11,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     errorElement: (
       <div className="min-h-screen flex justify-center items-center">
-        <h1 className="text-4xl">404 -Page Not Found 💣</h1>
+        <h1 className="text-4xl">404 Page Not Found 💣</h1>
       </div>
     ),
     children: [
@@ -18,6 +20,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       { path: "owner", element: <Owner /> },
+      { path: "user", element: <UserView /> },
+      { path: "admin", element: <AdminView /> },
     ],
   },
 ]);
